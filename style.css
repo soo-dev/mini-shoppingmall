@@ -1,4 +1,134 @@
+/* reset */
+:root {
+    /* color */
+    --color-black: #3f454d;
+    --color-white:#ffffff;
+    --color-blue: #3b88c3;
+    --color-yellow: #fbbe28;
+    --color-pink: #fd7f84;
+    --color-light-gray: #dfdfdf;
+
+    /* size */
+    --base-space: 8px;
+    --size-border: 4px;
+    --size-button: 60px;
+    --size-thumbnail: 50px;
+    --size-font: 18px;
+
+    /* animation */
+    --animation-duration: 300ms;
+}
+
 * {
     box-sizing: border-box;
-    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
 }
+
+html {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    cursor: pointer;
+}
+
+/* Style */
+  
+.logo {
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+    margin-right: var(--base-space);
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.btn:hover,
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.img-btn {
+    width: var(--size-button);
+    height: var(--size-button);
+}
+
+.color-btn {
+    font-size: var(--size-font);
+    padding: calc(var(--base-space)*2);
+    border-radius: var(--size-border);
+}
+
+.blue {
+    background-color: var(--color-blue);
+}
+
+.yellow {
+    background-color: var(--color-yellow);
+}
+
+.pink {
+    background-color: var(--color-pink);
+}
+
+.items {
+    width: 60%;
+    height: 60%;
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.item {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--base-space);
+    border-radius: var(--size-border);
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item-thumbnail {
+    width: var(--size-thumbnail);
+    height: var(--size-thumbnail);
+    padding: var(--base-space);
+}
+
+.item-description {
+    margin-left: var(--base-space);
+    font-size: var(--size-font);
+}
+
+.item-description:last-child {
+    margin-left: 0;
+}
+
+
+
